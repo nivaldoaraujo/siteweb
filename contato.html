@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha página WEB</title>
+    <title>Contato</title>
     <style>
         *{
             margin: 0;
@@ -35,26 +35,49 @@
         nav ul li a:hover{
             color: blanchedalmond;
         }
-        /* continuar */
-        /* Conteúdo */
-        main {
-            text-align: center;
-            padding: 40px;
-        }
-
-        main img {
-            width: 500px;
-            max-width: 100%;
+        .formulario{
+            padding-top: 10px;
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
             border-radius: 10px;
         }
 
-        .texto {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
+        .formulario h2{
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        /* Rodapé */
+        .formulario label{
+            display: block;
+            margin-top: 10px;
+        }
+
+        .formulario input,
+        .formulario textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .formulario button{
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .formulario button:hover{
+            background-color: #555;
+        }
+         /* Rodapé */
         footer {
             background-color: #333;
             color: white;
@@ -62,13 +85,13 @@
             padding: 15px;
             margin-top: 30px;
         }
-        main div h2{
-            color: crimson;
+        main h2{
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <!-- menu horizontal -->
+     <!-- menu horizontal -->
      <header>
         <nav>
             <ul>
@@ -81,18 +104,27 @@
 
     <!-- corpo da página -->
     <main>
-        <img src="imagem/img.jpg" alt="" >
-        <div class="texto">
-            <h2>Bem-vindo ao nosso site</h2>
-            <p>Esta é uma página desenvolvida utilizando apenas HTML e CSS.
-                Aqui você pode adicionar informações sobre sua empresa,
-                projeto ou portfólio.
-            </p>
-        </div>
+        
+        <div class="formulario">
+            <h2>Entre em Contato</h2>
+            <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="assunto">Assunto:</label>
+            <textarea id="assunto" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
     </main>
     <!-- rodapé da página -->
      <footer>
         www.meusite.com.br
      </footer>
+    
 </body>
 </html>
